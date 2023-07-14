@@ -6,14 +6,6 @@ import axios from 'axios';
 import UserContext from '../Context/UserContext';
 import {ToastContainer } from 'react-toastify';
 
-// const navigate = useNavigate();
-// { 
-//     image:"https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
-//     title:"",
-//     price:0,
-//     quantity:1
-// }
-
 
 const Cart = () => {
     const [cartItems,setCartItems] = useState([]);

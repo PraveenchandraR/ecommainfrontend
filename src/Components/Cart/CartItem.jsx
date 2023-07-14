@@ -31,8 +31,9 @@ const CartItem = ({Item,index}) => {
     }).then((res)=>{
       console.log("res==>Qty",res);
       toast.success('Item Qty updated ');
-      }).catch((error)=>{
-        console.log(error);
+    })
+      .catch((error) => {
+  
         toast.error('failed to update Item Qty');
       });
       // eslint-disable-next-line react-hooks/exhaustive-deps

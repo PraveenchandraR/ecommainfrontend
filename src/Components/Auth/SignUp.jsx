@@ -31,7 +31,7 @@ const SignUp = () => {
             console.log(response);
             toast.success('🦄 SignUp successful');
         }).catch((error)=>{
-            console.log(error);
+        
             toast.error(error.response.data.message);
         });
     }

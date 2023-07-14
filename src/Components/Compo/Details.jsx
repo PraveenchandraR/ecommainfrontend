@@ -19,7 +19,7 @@ const Details = () => {
   // console.log(product.rating["rate"]);
   useEffect(() => {
     axios
-      .post(`http://localhost:3001/products/${id}`)
+      .post(`https://ecomackend.onrender.com/products/${id}`)
       .then((res) => {
         // console.log(res.data);
         setItem(...[], res.data.product);
@@ -39,7 +39,7 @@ const Details = () => {
         quantity:1
       }
       console.log("Data",Data);
-      axios.post("http://localhost:3001/cart/addItem",{
+      axios.post("https://ecomackend.onrender.com/cart/addItem",{
         headers: {
             'Content-Type': 'application/json'
         },

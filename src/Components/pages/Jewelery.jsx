@@ -11,7 +11,7 @@ const Jewelery = () => {
 
     useEffect(() => {
       axios
-        .get("http://localhost:3001/jewelery")
+        .get("https://ecomackend.onrender.com/jewelery")
         .then((response) => {
           console.log("response ", response);
           setCards(response.data.allData);

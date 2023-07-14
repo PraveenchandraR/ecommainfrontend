@@ -10,7 +10,7 @@ const Electronic = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/electronics")
+      .get("https://ecomackend.onrender.com/electronics")
       .then((response) => {
         console.log("response ", response);
         setCards(response.data.allData);

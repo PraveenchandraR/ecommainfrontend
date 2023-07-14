@@ -25,7 +25,7 @@ const SignUp = () => {
 
     const handleClick = ()=>{
         console.log(User);
-        axios.post("http://localhost:3001/auth/signUp",{
+        axios.post("https://ecomackend.onrender.com/auth/signUp",{
             User
         }).then((response)=>{
             console.log(response);

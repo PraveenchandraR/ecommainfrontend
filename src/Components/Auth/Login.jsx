@@ -43,7 +43,7 @@ const Login = () => {
         'Authorization': token
       }
     }
-    axios.get("http://localhost:3001/auth/verify",Data).then((res)=>{
+    axios.get("https://ecomackend.onrender.com/auth/verify",Data).then((res)=>{
 
       console.log("res.data",res.status);
       if(res.status===200){
@@ -60,7 +60,7 @@ const Login = () => {
 
   const handleClick = ()=>{
     console.log(UserDetails);
-    axios.post("http://localhost:3001/auth/signIn",{
+    axios.post("https://ecomackend.onrender.com/auth/signIn",{
         User: UserDetails
     }).then((response)=>{
         console.log(response);

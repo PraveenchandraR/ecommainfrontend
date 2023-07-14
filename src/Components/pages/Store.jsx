@@ -48,7 +48,7 @@ const Store = () => {
         let string = queryString.stringify(queryParams).replace("%5B",'[')
         string = string.replace("%5D",']')
         console.log(string);
-        axios.get(`http://localhost:3001/store?${string}`)
+        axios.get(`https://ecomackend.onrender.com/store?${string}`)
         .then((res)=>{
             // console.log(res);
             setCards(res.data.Products);

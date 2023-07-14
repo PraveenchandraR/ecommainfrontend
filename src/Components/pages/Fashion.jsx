@@ -11,7 +11,7 @@ const Fashion = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/fasion")
+      .get("https://ecomackend.onrender.com/fasion")
       .then((response) => {
         console.log("response ", response);
         setCards(response.data.allData);

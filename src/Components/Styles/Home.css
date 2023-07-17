@@ -17,8 +17,8 @@
     )
     0% 0% no-repeat padding-box;
 }
-.MainContainer{
-      background-color: azure;
+.MainContainer {
+  background-color: azure;
 }
 .carouselImg {
   padding: 9px;
@@ -40,10 +40,11 @@
 }
 
 .carouse2 img {
-  height: 350px;
-  top: -70px;
-  left: 70%;
+  height: 250px;
+  /* top: -70px;
+   */
   position: absolute;
+  left: 70%;
 }
 
 .carouse2 h3 {
@@ -70,4 +71,10 @@
   margin: 0;
   display: inline-block;
   line-height: 20px;
+}
+
+@media only screen and (min-width: 350px) and (max-width: 900px) {
+  .carouse2 img {
+    display: none;
+  }
 }

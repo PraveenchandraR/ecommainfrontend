@@ -13,6 +13,17 @@
   border-radius: 50%;
   animation: spiner 1.5s linear infinite;
 }
+.StoreCarouse2 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+.StoreCarouse2 img {
+  height: 300px;
+}
 
 @keyframes spiner {
   0% {

@@ -12,6 +12,7 @@ import Order from '../UserProfile/Order';
 import ShowCart from '../Cart/ShowCart';
 import PersonalInfo from '../UserProfile/PersonalInfo';
 import Store from '../pages/Store';
+import Payment from "../pages/Payment";
 
 const RouteLinks = () => {
     return (
@@ -30,7 +31,8 @@ const RouteLinks = () => {
               <Route path='giftcard' element={<Order/>}/>
             </Route>
             <Route path='/cart' element={<ShowCart/>}/>
-            <Route path='/store' element={<Store/>}></Route>
+          <Route path='/store' element={<Store />}></Route>
+          <Route path="/payment" element={<Payment />} />
 
                        </Routes>    
 

@@ -12,7 +12,7 @@ const CartItem = ({Item,index}) => {
 
   const [Qty,setQty] = useState(Item.quantity);
   const {user} = useContext(UserContext);
-
+  
 
   useEffect(()=>{
     const Data = {
@@ -48,6 +48,8 @@ const CartItem = ({Item,index}) => {
     // QtyUpdated();
   }
 
+ 
+ 
   const handleClikDec = () =>{
     console.log("user",user);
     console.log("Before setQty call prev Qty==>",Qty);
@@ -55,6 +57,7 @@ const CartItem = ({Item,index}) => {
       setQty(Qty-1);
     }else{
       toast.warn('Item will be removed if Quntiry become zero');
+   setQty(0)
       console.log("toastwatn");
     }
     console.log("Before qtyUpdate call updated Qty==>",Qty);
@@ -64,7 +67,7 @@ const CartItem = ({Item,index}) => {
   return (
     <React.Fragment key={index}>
    
-      <div className="imgContainer">
+      <div className="imgContainer" >
         <img className="ItemImg" src={Item.image} alt="Itemimg" />
       </div>
       <div className="itemTitile">{Item.title}</div>
@@ -76,8 +79,10 @@ const CartItem = ({Item,index}) => {
           +
         </button>
       </div>
-      <h3 className="gridItem1">{Item.price * Qty}</h3>
-
+      <div> <h3 className="gridItem1">{Item.price * Qty}</h3></div>
+     
+     
+      
     </React.Fragment>
   );
 }

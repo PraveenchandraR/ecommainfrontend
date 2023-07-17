@@ -26,3 +26,13 @@
   display: inline-block;
   padding: 10px;
 }
+.check {
+  width: auto;
+  display: flex;
+  justify-content: space-around;
+}
+.checkout {
+  width: 100px;
+  border-radius: 10px;
+  background-color: aqua;
+}

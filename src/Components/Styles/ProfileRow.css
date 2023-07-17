@@ -1,7 +1,9 @@
 .ProfileBar {
   font-size: small;
   position: relative;
-  left: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .ProfileBar button {

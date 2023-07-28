@@ -25,11 +25,12 @@ const SignUp = () => {
 
     const handleClick = ()=>{
         console.log(User);
-        axios.post("https://ecomackend.onrender.com/auth/signUp",{
+        axios.post("https://ecomackend.onrender.com/auth/signUp", {
+       
             User
         }).then((response)=>{
-            console.log(response);
-            toast.success('🦄 SignUp successful',response.data.message);
+            console.log("response after signup",response);
+            toast.success('🦄 SignUp successful');
         }).catch((error)=>{
         
             toast.error(error.response.data.message);

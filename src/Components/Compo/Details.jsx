@@ -21,8 +21,13 @@ const Details = () => {
     axios
       .post(`https://ecomackend.onrender.com/products/${id}`)
       .then((res) => {
+        console.log("res.status",res.status)
         // console.log(res.data);
+        
         setItem(...[], res.data.product);
+       
+        // alert("product added to cart");
+        // navigate("/cart");
         console.log("product", Item);
       })
       .catch((err) => console.log(err));
@@ -38,15 +43,19 @@ const Details = () => {
         productID:id,
         quantity:1
       }
-      console.log("Data",Data);
+      console.log("Data", Data);
+      if (Data) {
+        alert('product added');
+        navigate('/cart');
+      }
       axios.post("https://ecomackend.onrender.com/cart/addItem",{
         headers: {
             'Content-Type': 'application/json'
         },
-        Data
-      }).then((res)=>{
-        // console.log("res==>",res);
-        toast.success('Item Added to cart ');
+        Data  
+      }).then((res) => {
+        console.log("respose",res.status)
+    
       }).catch((error)=>{
           console.log(error);
           toast.error('failed to add in cart');

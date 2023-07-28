@@ -29,7 +29,7 @@ const SignUp = () => {
             User
         }).then((response)=>{
             console.log(response);
-            toast.success('🦄 SignUp successful');
+            toast.success('🦄 SignUp successful',response.data.message);
         }).catch((error)=>{
         
             toast.error(error.response.data.message);

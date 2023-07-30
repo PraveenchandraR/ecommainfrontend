@@ -50,6 +50,9 @@ const handleCheck = () => {
             <div className='gridItem1 Font'>Unit Price</div>
             <div className='gridItem1 Font'>Qty</div>
               <div className='gridItem1 Font'>Total Price</div>
+               
+            
+            
             
         
             {
@@ -60,9 +63,16 @@ const handleCheck = () => {
                   
               }
      <div className='check' id='check' ><button className='checkout' onClick={handleCheck}>Checkout</button>
-</div>
-            <ToastContainer/>
-        </div>
+              </div>
+          
+              <ToastContainer />
+                
+          </div>
+          {/* <div>
+          <hr></hr>
+              <span>Total Purchase :  </span>
+              <span></span>
+              </div> */}
     </div>
   )
 }

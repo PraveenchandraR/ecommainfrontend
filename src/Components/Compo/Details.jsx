@@ -55,7 +55,7 @@ const Details = () => {
         Data  
       }).then((res) => {
         console.log("respose",res.status)
-    
+         
       }).catch((error)=>{
           console.log(error);
           toast.error('failed to add in cart');

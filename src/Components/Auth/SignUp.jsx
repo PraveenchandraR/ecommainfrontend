@@ -23,18 +23,32 @@ const SignUp = () => {
         // console.log(event.target.value);
     }
 
-    const handleClick = ()=>{
-        console.log(User);
-        axios.post("https://ecomackend.onrender.com/auth/signUp", {
+    const handleClick = async ()=>{
+      console.log(User);
+      
        
-            User
-        }).then((response)=>{
-            console.log("response after signup",response);
-            toast.success('🦄 SignUp successful');
-        }).catch((error)=>{
+        try {
+            const response = await axios.post("https://ecomackend.onrender.com/auth/signUp", User)
+            const data = await response.data
+            toast.success(data.message);
+        }
+        catch (error) {
+            toast.error(error)
+         }
+   
+      //  const response=await axios.post("https://ecomackend.onrender.com/auth/signUp", User )
+      //           .then((response) => {
+      //           console.log("response after signup", response);
+      //           toast.success('🦄 SignUp successful');
+            
+
+      //       })
+      //        .catch((error)=>{
         
-            toast.error(error.response.data.message);
-        });
+      //          toast.error(error.response.data.message);
+      //        });
+     
+            
     }
 
     useEffect(()=>{
@@ -87,4 +101,4 @@ const SignUp = () => {
   )
 }
 
-export default SignUp
+  export default SignUp;

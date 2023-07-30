@@ -33,7 +33,7 @@ const CartItem = ({Item,index}) => {
       toast.success('Item Qty updated ');
     })
       .catch((error) => {
-  
+        console.log(error);
         toast.error('failed to update Item Qty');
       });
       // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -52,22 +52,34 @@ const CartItem = ({Item,index}) => {
  
   const handleClikDec = () =>{
     console.log("user",user);
-    console.log("Before setQty call prev Qty==>",Qty);
+    console.log("Before setQty call prev Qty==>", Qty);
+   
     if(Qty>1){
       setQty(Qty-1);
-    }else{
+    }
+  //   if (Qty < 1) {
+  //     const delItem = document.getElementById('imgcontainer');
+  //     delItem.style.display = "none";
+  //      toast.warn('Item will be removed if Quntity become zero');
+  //  setQty(0)
+  //     console.log("toastwarn");
+      
+  //   }
+    else {
       toast.warn('Item will be removed if Quntiry become zero');
    setQty(0)
-      console.log("toastwatn");
+      console.log("toastwarn");
     }
     console.log("Before qtyUpdate call updated Qty==>",Qty);
     // QtyUpdated();
   }
+  // const totalPrice = Item.reduce((total, Item) => total + Item.price * Item.Qty, 0);
 
   return (
+  
     <React.Fragment key={index}>
-   
-      <div className="imgContainer" >
+  
+      <div className="imgContainer"  >
         <img className="ItemImg" src={Item.image} alt="Itemimg" />
       </div>
       <div className="itemTitile">{Item.title}</div>
@@ -80,10 +92,12 @@ const CartItem = ({Item,index}) => {
         </button>
       </div>
       <div> <h3 className="gridItem1">{Item.price * Qty}</h3></div>
-     
-     
+     {/* <div> <h3 className="gridItem1">{Item.price * Qty}</h3></div> */}
+          {/* <div> <h3 className="gridItem1">{Item.price * Qty}</h3></div>  */}
       
-    </React.Fragment>
+      </React.Fragment>
+       
+  
   );
 }
 

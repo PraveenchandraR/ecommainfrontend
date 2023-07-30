@@ -1,13 +1,14 @@
 import React,{useEffect, useRef, useState} from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Emoji from './../../Images/emoji-hand.png';
-import axios from 'axios';
+
 import "./../Styles/Login.css";
 import {useNavigate} from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useContext } from 'react';
 import UserContext from '../Context/UserContext';
+import axios from 'axios';
 
 
 
@@ -36,21 +37,21 @@ const Login = () => {
     }
     check.current = true;
 
-    const token = localStorage.getItem("Token");
+    // const token = localStorage.getItem("Token");
 
-    const Data = {
-      headers: {
-        'Authorization': token
-      }
-    }
-    axios.get("https://ecomackend.onrender.com/auth/verify",Data).then((res)=>{
+    // const Data = {
+    //   headers: {
+    //     'Authorization': token
+    //   }
+    // }
+    // axios.get("https://ecomackend.onrender.com/auth/verify",Data).then((res)=>{
 
-      console.log("res.data",res.status);
-      if(res.status===200){
-        SetUser(res.data)
-        navigate('/user/profile');
-      }
-    })
+    //   console.log("res.data",res.status);
+    //   if(res.status===200){
+    //     SetUser(res.data)
+    //     navigate('/user/profile');
+    //   }
+    // })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   },[]);
   
